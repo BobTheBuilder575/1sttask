@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>A Turk's Haven</title>
+</head>
+<body>
+    <!-- First Page (Home) -->
+    <div id="home-page">
+        <header class="hero-section">
+            <h1>A Turk's Haven</h1>
+            <h2>&mdash; Where every flavor tells a story&mdash;</h2>
+            <div class="button-container">
+                <button onclick="navigateTo('menu-page')">Menu</button>
+                
+            </div>
+        </header>
+    </div>
+
+    <!-- Second Page (Menu) -->
+
+    
+    <div id="menu-page" class="hidden">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#" onclick="navigateTo('home-page')" id="sthome">Home</a></li>
+                <li><a href="#" onclick="navigateTo('menu-page')" id="ndmenu">Menu</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-container">
+            <div class="food-items">
+                <img src="kofte.jpg" alt="Köfte">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>Köfte</h5>
+                        <h5 class="price">$10</h5>
+                    </div>
+                    <p>Köfte is a Turkish version of meatballs made with gently cooked ground lamb or beef.</p>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="sis kebabs.jpg" alt="Sis Kebabs">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>Sis Kebabs</h5>
+                        <h5 class="price">$13</h5>
+                    </div>
+                    <p>Sis Kebabs is the most famous Turkish cuisine, consisting of pieces of meat cooked fresh.</p>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="manti.jpg" alt="Manti">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>Manti</h5>
+                        <h5 class="price">$10</h5>
+                    </div>
+                    <p>Manti is a fried or boiled dumpling with beef or lamb filling accompanied by various spices.</p>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="doner.jpg" alt="Döner">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>Döner</h5>
+                        <h5 class="price">$16</h5>
+                    </div>
+                    <p>Döner is your dish if you love meat sandwiches and subs, made with lamb or chicken.</p>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="pide.webp" alt="Pide">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>Pide</h5>
+                        <h5 class="price">$10</h5>
+                    </div>
+                    <p>Pide is a popular Turkish flatbread loaded with sausage, spinach,eggs, cheese & spiced meat.</p>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="baklava.jpg" alt="Baklava">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>Baklava</h5>
+                        <h5 class="price">$16</h5>
+                    </div>
+                    <p>Baklava is a rich, syrupy pastry dessert, made of layers of filo separated with nuts,oil & butter.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function navigateTo(pageId) {
+            // Hide all pages
+            document.getElementById('home-page').classList.add('hidden');
+            document.getElementById('menu-page').classList.add('hidden');
+
+            // Show the selected page
+            document.getElementById(pageId).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

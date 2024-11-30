@@ -1,0 +1,181 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('try2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Optional: Makes the image cover the entire area */
+    background-position: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#sthome{
+    font-size: 22px;
+
+}
+
+#ndmenu{
+    font-size: 22px;
+}
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('try2.jpg'); /* Replace with your image path */
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center center; /* Centers the image */
+    background-color: #f8f9fa;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #ebeaea;
+}
+
+.hero-section h2 {
+    font-size: 1.5rem;
+    color: #ffd9b9;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button-container button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #64696e;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #292a2b;
+}
+
+.navbar ul {
+    height: 32%;
+    font-size: 38px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    padding: 10px;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 30px; /* Increased margin for more space between menu items */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffffff;
+}
+
+.menu-container {
+    max-width: 1200px; /* Restricts width to fit the laptop screen */
+    margin: 0 auto; /* Centers the grid on the screen */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three items per row */
+    gap: 40px; /* Space between items */
+    padding: 40px; /* Padding around the grid */
+    justify-content: center;
+    align-content: center;
+}
+
+.food-items {
+    width: 100%;
+    height: auto;
+    background-color: #f8f9fadc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.food-items:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.food-items img {
+    width: 100%;
+    height: 180px; /* Adjusted height for a balanced look */
+    object-fit: cover;
+}
+
+.details {
+    padding: 15px;
+}
+
+.details h5 {
+    font-size: 1.2rem; /* Slightly larger font size for better visibility */
+    margin: 10px 0;
+    color: #333;
+}
+
+.details-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Responsive Adjustments for Tablets */
+@media (max-width: 1024px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row */
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .food-items img {
+        height: 150px; /* Adjusted image height for smaller screens */
+    }
+}
+
+/* Mobile View (Retain Existing Styling) */
+@media (max-width: 767px) {
+    .menu-container {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 15px; /* Adjust spacing between items */
+        padding: 10px;
+    }
+
+    .food-items {
+        width: 100%; /* Full width of the container */
+        height: 340px; /* Adjust height */
+    }
+
+    .food-items img {
+        height: 150px; /* Adjust image height */
+    }
+
+    .details {
+        padding: 10px;
+    }
+
+    .details h5 {
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+}
